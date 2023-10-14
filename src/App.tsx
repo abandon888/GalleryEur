@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 import './App.css'
 import GalleryPage from './pages'
 import { Canvas } from '@react-three/fiber'
+import Loading from './pages/loading'
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           near: 0.1,
           far: 200,
         }}>
-        <Suspense fallback={null}>
+        <Suspense fallback={<Loading />}>
           <GalleryPage />
         </Suspense>
       </Canvas>
