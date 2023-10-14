@@ -32,6 +32,9 @@ dependencies:
   three:
     specifier: ^0.157.0
     version: registry.npmmirror.com/three@0.157.0
+  three-stdlib:
+    specifier: ^2.27.2
+    version: registry.npmmirror.com/three-stdlib@2.27.2(three@0.157.0)
 
 devDependencies:
   '@types/react':

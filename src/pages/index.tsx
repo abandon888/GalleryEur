@@ -6,53 +6,10 @@ import {
 import { Perf } from 'r3f-perf'
 import { Physics, RigidBody } from '@react-three/rapier'
 import { Player } from './player'
+import { Model } from '../model'
 
 export default function GalleryPage() {
   const gallery = useGLTF('./the_hallwyl_museum/modelDraco.gltf')
-  // const controls = new OrbitControls(camera)
-
-  // //使用useFrame持续更新相机的位置
-  // useFrame((state) => {
-  //   // const position = state.camera.position
-  //   // const quaternion = state.camera.quaternion
-  //   // const euler = state.camera.rotation
-  //   // console.log(position)
-  //   //更新相机的位置
-  //   camera.position.set(position[0], position[1], position[2])
-  //   const controls = new OrbitControls(camera,camera.domElement)
-  // })
-
-  // const changePosition = (e: any) => {
-  //   //根据按下的键盘按键，改变相机的位置,w向前，s向后，a向左，d向右
-  //   switch (e.key) {
-  //     case 'w':
-  //       setPositon([position[0], position[1], position[2] - 1])
-  //       break
-  //     case 's':
-  //       setPositon([position[0], position[1], position[2] + 1])
-  //       break
-  //     case 'a':
-  //       setPositon([position[0] - 1, position[1], position[2]])
-  //       break
-  //     case 'd':
-  //       setPositon([position[0] + 1, position[1], position[2]])
-  //       break
-  //     default:
-  //       break
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   window.addEventListener('keydown', changePosition)
-  //   return () => {
-  //     window.removeEventListener('keydown', changePosition)
-  //   }
-  // }, [])
-
-  // useEffect(() => {
-  //   //设置相机的位置
-  //   camera.position.set(position[0], position[1], position[2])
-  // }, [])
 
   return (
     <>
@@ -77,7 +34,7 @@ export default function GalleryPage() {
           {/* 引入模型 */}
           <Player />
           <RigidBody type="fixed" colliders="trimesh">
-            <primitive object={gallery.scene} />
+            <Model />
           </RigidBody>
 
           <RigidBody type="fixed">
