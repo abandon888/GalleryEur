@@ -45,7 +45,9 @@ type GLTFResult = GLTF & {
 }
 
 export function Model(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/modelDraco.gltf') as GLTFResult
+  const { nodes, materials } = useGLTF(
+    './the_hallwyl_museum/modelDraco.gltf'
+  ) as GLTFResult
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={2}>
@@ -178,4 +180,4 @@ export function Model(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/modelDraco.gltf')
+useGLTF.preload('./the_hallwyl_museum/modelDraco.gltf')
