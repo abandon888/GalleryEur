@@ -1,7 +1,9 @@
 import {
+  Html,
   KeyboardControls,
   OrbitControls,
   PointerLockControls,
+  Text,
   useGLTF,
 } from '@react-three/drei'
 import { Perf } from 'r3f-perf'
@@ -49,12 +51,38 @@ export default function GalleryPage() {
             </mesh>
           </RigidBody>
 
-          {/* <RigidBody type="dynamic" mass={1}>
-            <mesh position={[-5, 0, 15]}>
+          <RigidBody type="dynamic">
+            <mesh
+              position={[-5, 0, 12]}
+              onClick={() => {
+                console.log('click')
+              }}>
               <boxGeometry args={[1, 1, 1]} />
               <meshStandardMaterial color="powderblue" />
+              {/* 光调个字的位置都要调半天 */}
+              <Text
+                fontSize={0.5}
+                position={[0, 0.7, -1.5]}
+                color="blue"
+                direction="ltr"
+                rotation={[-1, 4, 0.5]}>
+                Click the box
+              </Text>
+              {/* <Html>
+                <div
+                  style={{
+                    width: '85px',
+                    height: '45px',
+                    backgroundColor: 'pink',
+                    borderRadius: '10px',
+                    textAlign: 'center',
+                    lineHeight: '45px',
+                  }}>
+                  请点击盒子
+                </div>
+              </Html> */}
             </mesh>
-          </RigidBody> */}
+          </RigidBody>
 
           {/* <Wall /> */}
         </Physics>

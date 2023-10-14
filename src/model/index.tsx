@@ -51,6 +51,7 @@ export function Model(props: JSX.IntrinsicElements['group']) {
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={2}>
+        {/* (2,4)大厅 */}
         <group
           position={[0.553, -9.413, 3.573]}
           rotation={[-Math.PI / 2, 0, -Math.PI]}
