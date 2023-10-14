@@ -1,11 +1,10 @@
 // 导入 Three.js
 import * as THREE from 'three'
-import { Vector3 } from 'three'
 // 导入 Rapier 物理引擎
 import * as RAPIER from '@dimforge/rapier3d-compat'
 
 // 从 React 中导入 useRef 和 useFrame Hook
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 
 // 从 drei 中导入键盘控制 Hook
@@ -26,7 +25,7 @@ const frontVector: THREE.Vector3 = new THREE.Vector3()
 // 正左方方向向量
 const sideVector: THREE.Vector3 = new THREE.Vector3()
 
-export function Player({ lerp = THREE.MathUtils.lerp }) {
+export function Player() {
   // 保存对斧头和玩家游戏对象的引用
   // const axe = useRef()
   const ref = useRef<RAPIER.RigidBody>()

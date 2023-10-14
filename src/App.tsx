@@ -1,4 +1,4 @@
-import { Suspense, useState } from 'react'
+import { Suspense } from 'react'
 import './App.css'
 import GalleryPage from './pages'
 import { Canvas } from '@react-three/fiber'

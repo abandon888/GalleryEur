@@ -1,23 +1,14 @@
 import {
-  Environment,
   KeyboardControls,
-  OrbitControls,
   PointerLockControls,
   useGLTF,
-  useKeyboardControls,
 } from '@react-three/drei'
-import { useThree, useFrame, Canvas } from '@react-three/fiber'
 import { Perf } from 'r3f-perf'
-import { useState, useEffect } from 'react'
-import { extend } from '@react-three/fiber'
-import { Debug, Physics, RigidBody } from '@react-three/rapier'
+import { Physics, RigidBody } from '@react-three/rapier'
 import { Player } from './player'
-import Wall from './wall'
 
 export default function GalleryPage() {
   const gallery = useGLTF('./the_hallwyl_museum/modelDraco.gltf')
-  const { camera } = useThree()
-  const [position, setPositon] = useState([0, 0, 0])
   // const controls = new OrbitControls(camera)
 
   // //使用useFrame持续更新相机的位置
