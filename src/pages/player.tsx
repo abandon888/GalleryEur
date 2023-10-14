@@ -43,19 +43,14 @@ export function Player({ lerp = THREE.MathUtils.lerp }) {
     //console.log(forward, backward, left, right, jump)
 
     // 当前速度向量
-    const velocity = ref.current?.linvel()
+    const velocity = ref.current?.linvel() ?? new RAPIER.Vector3(0, 0, 0)
     // console.log(velocity)
     // 更新摄像机位置跟随玩家
     state.camera.position.set(
-      ref.current?.translation().x,
-      ref.current?.translation().y,
-      ref.current?.translation().z
+      ref.current?.translation().x ?? 0,
+      ref.current?.translation().y ?? 0,
+      ref.current?.translation().z ?? 0
     )
-
-    // // 更新斧头朝向
-    // axe.current.children[0].rotation.x = lerp(axe.current.children[0].rotation.x, Math.sin((velocity.length() > 1) * state.clock.elapsedTime * 10) / 6, 0.1)
-    // axe.current.rotation.copy(state.camera.rotation)
-    // axe.current.position.copy(state.camera.position).add(state.camera.getWorldDirection(rotation).multiplyScalar(1))
 
     // 根据键盘输入计算前进和左右移动方向
     //@ts-ignore
@@ -70,20 +65,21 @@ export function Player({ lerp = THREE.MathUtils.lerp }) {
       .applyEuler(state.camera.rotation)
 
     // 设置线性速度
-    ref.current.setLinvel(
+    ref.current?.setLinvel(
       { x: direction.x, y: velocity.y, z: direction.z },
       true
     )
 
     // 判断是否在地面,从而实现跳跃
+    //@ts-ignore
     const world: RAPIER.World = rapier.world.raw()
     const ray = world.castRay(
-      new RAPIER.Ray(ref.current.translation(), { x: 0, y: -1, z: 0 }),
+      new RAPIER.Ray(ref.current?.translation()!, { x: 0, y: -1, z: 0 }),
       1,
       true
     )
     const grounded = ray && ray.collider && Math.abs(ray.toi) <= 1.75
-    if (jump && grounded) ref.current.setLinvel({ x: 0, y: 7.5, z: 0 }, true)
+    if (jump && grounded) ref.current?.setLinvel({ x: 0, y: 7.5, z: 0 }, true)
   })
 
   // useEffect(() => {
