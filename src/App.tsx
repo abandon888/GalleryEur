@@ -7,17 +7,17 @@ import Loading from './pages/loading'
 function App() {
   return (
     <>
-      <Canvas
-        shadows
-        camera={{
-          fov: 45,
-          near: 0.1,
-          far: 200,
-        }}>
-        <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Loading />}>
+        <Canvas
+          shadows
+          camera={{
+            fov: 45,
+            near: 0.1,
+            far: 200,
+          }}>
           <GalleryPage />
-        </Suspense>
-      </Canvas>
+        </Canvas>
+      </Suspense>
     </>
   )
 }

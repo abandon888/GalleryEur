@@ -3,9 +3,11 @@ import React from 'react'
 
 const Loading: React.FC = () => {
   return (
-    <div className="loading-container">
+    <div
+    //className="loading-container"
+    >
       <h1>加载中...</h1>
-      <p>模型比较大，加载中请耐心等待</p>
+      <div>模型比较大，加载中请耐心等待</div>
       {/* <img src="loading.gif" alt="Loading" /> */}
     </div>
   )
