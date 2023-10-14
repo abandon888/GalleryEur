@@ -6,7 +6,6 @@ import { Canvas } from '@react-three/fiber'
 function App() {
   return (
     <>
-      trans
       <Canvas
         shadows
         camera={{
