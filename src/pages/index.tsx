@@ -35,7 +35,7 @@ export default function GalleryPage() {
           <directionalLight castShadow position={[0, 10, 0]} intensity={1} />
           <ambientLight intensity={0.5} />
           {/* 引入模型 */}
-          {/* <Player /> */}
+          <Player />
           <RigidBody type="fixed" colliders="trimesh">
             <Model />
           </RigidBody>
@@ -89,8 +89,8 @@ export default function GalleryPage() {
           {/* <Wall /> */}
         </Physics>
 
-        <OrbitControls />
-        {/* <PointerLockControls /> */}
+        {/* <OrbitControls /> */}
+        <PointerLockControls />
       </KeyboardControls>
     </>
   )
