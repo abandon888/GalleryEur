@@ -61,7 +61,6 @@ export default function GalleryPage() {
               <meshStandardMaterial color="powderblue" />
               {/* 光调个字的位置都要调半天 */}
               <Text
-                // font="https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxK.woff2"
                 fontSize={0.5}
                 position={[0, 0.7, -1.5]}
                 color="blue"
