@@ -4,7 +4,8 @@
 
 项目基于 three.js 开发，实现了博物馆的导览功能，用户可以通过"w","s","a","d"键或小键盘控制视角位置的移动，通过鼠标左键控制相机的视角，通过鼠标右键控制相机的高度，通过点击博物馆内的热点，查看博物馆内部的展览信息。
 
-预览链接：<https://lucent-florentine-4c5ee3.netlify.app/>
+预览链接 1：<https://lucent-florentine-4c5ee3.netlify.app/>(需科学上网)
+预览链接 2：<http://3ddemo.ncuos.com/>
 
 ## 项目运行
 
@@ -34,3 +35,9 @@ npm run build
 - [ ] 美观的懒加载
 - [ ] 游览音乐
 - [ ] 文字导引
+
+- [ ] 视角调节：一进去能看见建筑
+- [ ] 进门导引
+- [ ] public 文件优化
+
+- [ ] 添加 gpt 互动要素
