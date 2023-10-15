@@ -1,0 +1,45 @@
+.sider-btn {
+  width: 72px;
+  height: 72px;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+
+  border: 1px solid #fff;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+.sider-btn:hover {
+  cursor: pointer;
+  transform: rotate(0);
+  .sider-btn-text {
+    transform: rotate(0);
+  }
+  transition: all 0.3s ease-in-out;
+}
+
+.sider-btn-text {
+  color: #fff;
+  transform: rotate(-45deg);
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.sider-btn-group {
+  /* 固定在屏幕右侧 */
+  position: fixed;
+  top: 25%;
+  right: 2%;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  height: 50vh;
+  justify-content: space-between;
+  flex-direction: column;
+}

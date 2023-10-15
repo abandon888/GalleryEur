@@ -1,12 +1,14 @@
 import { Suspense } from 'react'
-import './App.css'
+import './styles/App.css'
 import GalleryPage from './pages'
 import { Canvas } from '@react-three/fiber'
 import Loading from './pages/loading'
+import Sider from './pages/sider'
 
 function App() {
   return (
     <>
+      <Sider />
       <Suspense fallback={<Loading />}>
         <Canvas
           shadows
