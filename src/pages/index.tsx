@@ -10,9 +10,11 @@ import { Perf } from 'r3f-perf'
 import { Physics, RigidBody } from '@react-three/rapier'
 import { Player } from './player'
 import { Model } from '../model'
+import Modal from '../components/modal'
+import { useState } from 'react'
 
 export default function GalleryPage() {
-  const gallery = useGLTF('./the_hallwyl_museum/modelDraco.gltf')
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <>
@@ -55,7 +57,7 @@ export default function GalleryPage() {
             <mesh
               position={[-5, 0, 12]}
               onClick={() => {
-                console.log('click')
+                setIsOpen(true)
               }}>
               <boxGeometry args={[1, 1, 1]} />
               <meshStandardMaterial color="powderblue" />
@@ -70,19 +72,16 @@ export default function GalleryPage() {
                 {/* 请点击盒子 */}
                 Click the box
               </Text>
-              {/* <Html>
-                <div
-                  style={{
-                    width: '85px',
-                    height: '45px',
-                    backgroundColor: 'pink',
-                    borderRadius: '10px',
-                    textAlign: 'center',
-                    lineHeight: '45px',
-                  }}>
-                  请点击盒子
-                </div>
-              </Html> */}
+              <Html>
+                <Modal
+                  isOpen={isOpen}
+                  title="hello"
+                  content="world"
+                  onClose={() => {
+                    setIsOpen(false)
+                  }}
+                />
+              </Html>
             </mesh>
           </RigidBody>
 

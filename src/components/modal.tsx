@@ -5,22 +5,19 @@ type ModalProps = {
   title: string
   content: string
   onClose: () => void
+  isOpen: boolean
 }
 
-function Modal({ title, content, onClose }: ModalProps) {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const open = () => setIsOpen(true)
-  const close = () => setIsOpen(false)
-
+function Modal({ title, content, onClose, isOpen }: ModalProps) {
   return (
     <>
-      {/* <button onClick={open}>Open Modal</button> */}
-
       {isOpen && (
         <div className="modal">
           <div className="modal-content">
-            <span className="close" onClick={close}>
+            <span
+              className="close"
+              //onClick={close}
+            >
               &times;
             </span>
             <h1>{title}</h1>
