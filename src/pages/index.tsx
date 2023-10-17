@@ -55,7 +55,7 @@ export default function GalleryPage() {
               position-y={-0.8}
               rotation-x={-Math.PI * 0.5}
               scale={10}>
-              <boxGeometry args={[10, 10, 0.05]} />
+              <boxGeometry args={[20, 20, 0.05]} />
               <meshStandardMaterial color="powderblue" />
             </mesh>
           </RigidBody>
