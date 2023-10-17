@@ -78,7 +78,7 @@ export function Player() {
       true
     )
     const grounded = ray && ray.collider && Math.abs(ray.toi) <= 1.75
-    if (jump && grounded) ref.current?.setLinvel({ x: 0, y: 7.5, z: 0 }, true)
+    if (jump && grounded) ref.current?.setLinvel({ x: 0, y: 3.5, z: 0 }, true)
   })
 
   // useEffect(() => {
