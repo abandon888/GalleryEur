@@ -2,6 +2,7 @@ import { useKeyboardControls } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { RigidBody, CuboidCollider } from '@react-three/rapier'
 import { useControlStore } from '../store'
+import { message } from 'antd'
 
 export default function Wall() {
   const { isLockControl, setIsLock } = useControlStore()
@@ -12,9 +13,12 @@ export default function Wall() {
     console.log(changeLock)
     if (changeLock) {
       setTimeout(() => {
+        isLockControl
+          ? message.info('已切换到自由视角，请再点击Esc键退出，使用滚轮放缩')
+          : message.info('已切换到第一视角，请点击进入')
         setIsLock(!isLockControl)
         console.log(isLockControl)
-      }, 1000)
+      }, 2000)
     }
   })
   return (
