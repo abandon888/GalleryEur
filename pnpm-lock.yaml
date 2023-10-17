@@ -35,6 +35,9 @@ dependencies:
   three-stdlib:
     specifier: ^2.27.2
     version: registry.npmmirror.com/three-stdlib@2.27.2(three@0.157.0)
+  zustand:
+    specifier: ^4.4.3
+    version: registry.npmmirror.com/zustand@4.4.3(@types/react@18.2.28)(react@18.2.0)
 
 devDependencies:
   '@types/react':
@@ -2993,6 +2996,29 @@ packages:
       react:
         optional: true
     dependencies:
+      react: registry.npmmirror.com/react@18.2.0
+      use-sync-external-store: registry.npmmirror.com/use-sync-external-store@1.2.0(react@18.2.0)
+    dev: false
+
+  registry.npmmirror.com/zustand@4.4.3(@types/react@18.2.28)(react@18.2.0):
+    resolution: {integrity: sha512-oRy+X3ZazZvLfmv6viIaQmtLOMeij1noakIsK/Y47PWYhT8glfXzQ4j0YcP5i0P0qI1A4rIB//SGROGyZhx91A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/zustand/-/zustand-4.4.3.tgz}
+    id: registry.npmmirror.com/zustand/4.4.3
+    name: zustand
+    version: 4.4.3
+    engines: {node: '>=12.7.0'}
+    peerDependencies:
+      '@types/react': '>=16.8'
+      immer: '>=9.0'
+      react: '>=16.8'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      immer:
+        optional: true
+      react:
+        optional: true
+    dependencies:
+      '@types/react': registry.npmmirror.com/@types/react@18.2.28
       react: registry.npmmirror.com/react@18.2.0
       use-sync-external-store: registry.npmmirror.com/use-sync-external-store@1.2.0(react@18.2.0)
     dev: false
