@@ -14,7 +14,9 @@ import Modal from '../components/modal'
 import { useState } from 'react'
 
 export default function GalleryPage() {
+
   const [isOpen, setIsOpen] = useState(false)
+
 
   return (
     <>
@@ -37,7 +39,7 @@ export default function GalleryPage() {
           <directionalLight castShadow position={[0, 10, 0]} intensity={1} />
           <ambientLight intensity={0.5} />
           {/* 引入模型 */}
-          {/* <Player /> */}
+          <Player />
           <RigidBody type="fixed" colliders="trimesh">
             <Model />
           </RigidBody>
@@ -48,7 +50,7 @@ export default function GalleryPage() {
               position-y={-0.8}
               rotation-x={-Math.PI * 0.5}
               scale={10}>
-              <boxGeometry args={[10, 10, 0.05]} />
+              <boxGeometry args={[25, 25, 0.05]} />
               <meshStandardMaterial color="powderblue" />
             </mesh>
           </RigidBody>
@@ -63,7 +65,6 @@ export default function GalleryPage() {
               <meshStandardMaterial color="powderblue" />
               {/* 光调个字的位置都要调半天 */}
               <Text
-                //font="../assets/MaShanZheng-Regular.ttf"
                 fontSize={0.5}
                 position={[0, 0.7, -1.5]}
                 color="blue"
@@ -88,8 +89,8 @@ export default function GalleryPage() {
           {/* <Wall /> */}
         </Physics>
 
-        <OrbitControls />
-        {/* <PointerLockControls /> */}
+        {/* <OrbitControls /> */}
+        <PointerLockControls />
       </KeyboardControls>
     </>
   )
