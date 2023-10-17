@@ -12,6 +12,7 @@ import { useKeyboardControls } from '@react-three/drei'
 
 // 从 Rapier 中导入碰撞体、刚体和 Hook
 import { CapsuleCollider, RigidBody, useRapier } from '@react-three/rapier'
+import { useControlStore } from '../store'
 
 // 移动速度
 const SPEED = 5
@@ -29,7 +30,6 @@ export function Player() {
   // 保存对斧头和玩家游戏对象的引用
   // const axe = useRef()
   const ref = useRef<RAPIER.RigidBody>()
-
   // 初始化 Rapier 物理引擎
   const rapier = useRapier()
 
@@ -39,7 +39,6 @@ export function Player() {
   useFrame((state) => {
     // 获取键盘输入方向
     const { forward, backward, left, right, jump } = get()
-    //console.log(forward, backward, left, right, jump)
 
     // 当前速度向量
     const velocity = ref.current?.linvel() ?? new RAPIER.Vector3(0, 0, 0)
