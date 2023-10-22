@@ -2,8 +2,16 @@
   "name": "gallery",
   "private": true,
   "version": "0.0.0",
+  "description": "A React app built with Vite",
+  "main": "main.cjs",
+  "author": {
+    "name": "Tsingper",
+    "email": "tsingper@outlook.com"
+  },
+  "license": "MIT",
   "type": "module",
   "scripts": {
+    "start": "electron .",
     "dev": "vite",
     "build": "tsc && vite build --force",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives",
@@ -30,6 +38,7 @@
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react": "^4.0.3",
     "autoprefixer": "^10.4.16",
+    "electron": "^27.0.2",
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
