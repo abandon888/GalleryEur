@@ -11,10 +11,13 @@ export function Video() {
   }, [setIsEnd])
 
   return (
-    <div>
+    <>
       <div id="guide" className="w-[100%] h-[100%]">
-        <video src="../guide.mp4" autoPlay></video>
+        <video
+          src="../guide.mp4"
+          autoPlay
+          className="w-[100%] h-[100%]"></video>
       </div>
-    </div>
+    </>
   )
 }
