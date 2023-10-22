@@ -5,6 +5,9 @@ export function Video() {
   const { isEnd, setIsEnd } = useVideoStore()
   useEffect(() => {
     const video = document.querySelector('video')
+    video?.addEventListener('click', () => {
+      video.play()
+    })
     video.addEventListener('ended', () => {
       setIsEnd(true)
     })
