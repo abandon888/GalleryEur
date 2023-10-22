@@ -42,3 +42,4 @@ npm run build
 - [ ] public 文件优化
 
 - [ ] 添加 gpt 互动要素
+- [x] 打包为桌面端应用
