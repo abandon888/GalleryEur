@@ -39,7 +39,7 @@ export default function GalleryPage() {
             ground={{ height: 10, radius: 40, scale: 40 }}
           /> */}
           {/* <Canvas camera={{ position: [0, 0, 0] }}> */}
-          <Perf position="top-left" />
+          {/* <Perf position="top-left" /> */}
           <directionalLight castShadow position={[0, 10, 0]} intensity={1} />
           <ambientLight intensity={0.5} />
           {/* 引入模型 */}
@@ -60,7 +60,7 @@ export default function GalleryPage() {
             </mesh>
           </RigidBody>
 
-          <RigidBody type="dynamic">
+          {/* <RigidBody type="dynamic">
             <mesh
               position={[-5, 0, 12]}
               onClick={() => {
@@ -68,7 +68,6 @@ export default function GalleryPage() {
               }}>
               <boxGeometry args={[1, 1, 1]} />
               <meshStandardMaterial color="powderblue" />
-              {/* 光调个字的位置都要调半天 */}
               <Text
                 //font="../assets/MaShanZheng-Regular.ttf"
                 fontSize={0.5}
@@ -76,7 +75,7 @@ export default function GalleryPage() {
                 color="blue"
                 direction="ltr"
                 rotation={[-1, 4, 0.5]}>
-                {/* 请点击盒子 */}
+               
                 Click the box
               </Text>
               <Html>
@@ -90,7 +89,7 @@ export default function GalleryPage() {
                 />
               </Html>
             </mesh>
-          </RigidBody>
+          </RigidBody> */}
 
           <Wall />
         </Physics>

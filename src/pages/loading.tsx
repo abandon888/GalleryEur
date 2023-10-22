@@ -1,7 +1,14 @@
-import React from 'react'
+import { message } from 'antd'
+import React, { useEffect } from 'react'
 //import './loading.css'
 
 const Loading: React.FC = () => {
+  useEffect(() => {
+    message.info(
+      '请使用w,a,s,d控制移动，空格键跳跃，鼠标控制视角,L键切换视角',
+      5000
+    )
+  }, [])
   return (
     <div
     //className="loading-container"

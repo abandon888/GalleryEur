@@ -26,7 +26,7 @@ export default function Sider() {
   return (
     <>
       <div>
-        <SiderText children={['T', 'W', 'S']} />
+        <SiderText children={['中', '国', '古', '寺', '院']} />
       </div>
     </>
   )

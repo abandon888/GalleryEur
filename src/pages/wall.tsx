@@ -3,11 +3,13 @@ import { useFrame } from '@react-three/fiber'
 import { RigidBody, CuboidCollider } from '@react-three/rapier'
 import { useControlStore } from '../store'
 import { message } from 'antd'
+import { useEffect } from 'react'
 
 export default function Wall() {
   const { isLockControl, setIsLock } = useControlStore()
 
   const [, get] = useKeyboardControls()
+
   useFrame(() => {
     const { changeLock } = get()
     console.log(changeLock)
