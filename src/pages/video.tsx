@@ -1,9 +1,11 @@
 import { useEffect } from 'react'
 import { useVideoStore } from '../store'
+import { message } from 'antd'
 
 export function Video() {
   const { isEnd, setIsEnd } = useVideoStore()
   useEffect(() => {
+    message.info('请点击播放视频', 3)
     const video = document.querySelector('video')
     video?.addEventListener('click', () => {
       video.play()
