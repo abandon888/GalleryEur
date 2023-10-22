@@ -12,7 +12,7 @@ export function Video() {
 
   return (
     <div>
-      <div id="guide">
+      <div id="guide" className="w-[100%] h-[100%]">
         <video src="../assets/guide.mp4" autoPlay></video>
       </div>
     </div>

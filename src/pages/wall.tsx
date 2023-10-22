@@ -12,7 +12,6 @@ export default function Wall() {
 
   useFrame(() => {
     const { changeLock } = get()
-    console.log(changeLock)
     if (changeLock) {
       setTimeout(() => {
         isLockControl

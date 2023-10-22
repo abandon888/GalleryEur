@@ -14,7 +14,7 @@ function App() {
       {isEnd ? (
         <Video />
       ) : (
-        <div>
+        <>
           <Sider />
           <Suspense fallback={<Loading />}>
             <Canvas
@@ -27,7 +27,7 @@ function App() {
               <GalleryPage />
             </Canvas>
           </Suspense>
-        </div>
+        </>
       )}
     </>
   )
