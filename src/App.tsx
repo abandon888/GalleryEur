@@ -9,9 +9,10 @@ import { Video } from './pages/video'
 
 function App() {
   const { isEnd } = useVideoStore()
+  console.log(isEnd)
   return (
     <>
-      {isEnd ? (
+      {isEnd == false ? (
         <Video />
       ) : (
         <>

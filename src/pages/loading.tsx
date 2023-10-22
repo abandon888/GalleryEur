@@ -6,7 +6,7 @@ const Loading: React.FC = () => {
   useEffect(() => {
     message.info(
       '请使用w,a,s,d控制移动，空格键跳跃，鼠标控制视角,L键切换视角',
-      500
+      15
     )
   }, [])
   return (
