@@ -71,7 +71,7 @@ type GLTFResult = GLTF & {
 
 export function Model(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(
-    'public/ancient_chinese_courtyard_park/sceneDraco.gltf'
+    './ancient_chinese_courtyard_park/sceneDraco.gltf'
   ) as GLTFResult
   return (
     <group {...props} dispose={null}>
@@ -387,4 +387,4 @@ export function Model(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('public/ancient_chinese_courtyard_park/sceneDraco.gltf')
+useGLTF.preload('./ancient_chinese_courtyard_park/sceneDraco.gltf')
