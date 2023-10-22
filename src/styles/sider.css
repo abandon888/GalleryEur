@@ -33,13 +33,13 @@
 .sider-btn-group {
   /* 固定在屏幕右侧 */
   position: fixed;
-  top: 25%;
+  top: 12.5%;
   right: 2%;
   z-index: 100;
 
   display: flex;
   align-items: center;
-  height: 50vh;
+  height: 75vh;
   justify-content: space-between;
   flex-direction: column;
 }
